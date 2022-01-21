@@ -1,5 +1,5 @@
 
-name: BYdevopsdemo CI CD Deployment
+name: Build and deploy ASP.Net Core app to Azure Web App - bydevopsdemo
 
 on:
   push:
