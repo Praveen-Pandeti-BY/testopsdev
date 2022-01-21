@@ -29,3 +29,14 @@ jobs:
 #run automated tests
      # - name: Run automated tests
      # - run: dotner test --configuration Release
+
+      - name: publish app
+        run: dotnet publish --configuration Release -o ./out
+
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'testopsdev'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4096909440B8472FBFBD0FE4E9AD692D }}
+          package: ./out
