@@ -30,8 +30,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with: >
-            args:
+        with:
+            args: >
             -Dsonar.organization=Praveen-Pandeti-BY
             -Dsonar.projectKey=Praveen-Pandeti-BY_testopsdev
 
